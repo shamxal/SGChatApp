@@ -1,5 +1,4 @@
-# SGChatApp
-text message application example for ios
+# Overview
 
 SGChatApp is an example for message application. Simply send text message.
 
