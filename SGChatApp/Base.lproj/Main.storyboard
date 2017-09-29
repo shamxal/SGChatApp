@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ORa-M1-3dG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yMm-34-tuM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ORa-M1-3dG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PDt-x1-2FL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T8e-C7-dEt" kind="relationship" relationship="rootViewController" id="GR1-O1-ony"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NE2-Ct-nWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114.40000000000001" y="792.95352323838085"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="kks-eF-Iun">
+            <objects>
+                <viewController storyboardIdentifier="SGChatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T8e-C7-dEt" customClass="SGChatVC" customModule="SGChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VuP-xU-P9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="YFv-hh-MAW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7hb-VM-bih">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-87-nhP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qgD-Y7-YoZ">
+                                    <size key="itemSize" width="375" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SGChatCell" id="UxH-VR-RTC" customClass="SGChatCell" customModule="SGChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatMan" translatesAutoresizingMaskIntoConstraints="NO" id="OSo-ZN-Ube">
+                                                    <rect key="frame" x="8" y="62" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="MqP-io-uO7"/>
+                                                        <constraint firstAttribute="height" constant="30" id="slg-5l-9Sl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I31-yw-hxO">
+                                                    <rect key="frame" x="42" y="0.0" width="293" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qw7-WY-SeO">
+                                                    <rect key="frame" x="42" y="0.0" width="293" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatWoman" translatesAutoresizingMaskIntoConstraints="NO" id="n2y-kL-L3m">
+                                                    <rect key="frame" x="329" y="62" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="2dA-xa-ryM"/>
+                                                        <constraint firstAttribute="width" constant="30" id="LTs-LJ-U81"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="OSo-ZN-Ube" firstAttribute="bottom" secondItem="UxH-VR-RTC" secondAttribute="bottomMargin" id="5SV-DD-bIq"/>
+                                            <constraint firstItem="n2y-kL-L3m" firstAttribute="bottom" secondItem="UxH-VR-RTC" secondAttribute="bottomMargin" id="5cb-8H-amf"/>
+                                            <constraint firstItem="n2y-kL-L3m" firstAttribute="trailing" secondItem="UxH-VR-RTC" secondAttribute="trailingMargin" constant="-8" id="Vag-tn-EGj"/>
+                                            <constraint firstItem="OSo-ZN-Ube" firstAttribute="leading" secondItem="UxH-VR-RTC" secondAttribute="leadingMargin" id="aft-fg-vFN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgChatBubble" destination="I31-yw-hxO" id="FGP-AB-T4r"/>
+                                            <outlet property="imgMe" destination="n2y-kL-L3m" id="LWb-Nw-lMS"/>
+                                            <outlet property="imgProfile" destination="OSo-ZN-Ube" id="Tgp-pD-M0L"/>
+                                            <outlet property="txtViewChat" destination="Qw7-WY-SeO" id="gUp-tV-srY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="T8e-C7-dEt" id="6Lw-R2-aL0"/>
+                                    <outlet property="delegate" destination="T8e-C7-dEt" id="Ihy-gs-UVj"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3b-Ij-93S">
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbQ-A1-yVY">
+                                        <rect key="frame" x="8" y="7" width="306" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxA-mZ-xcI">
+                                        <rect key="frame" x="322" y="12" width="45" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CXd-Iv-ae1"/>
+                                            <constraint firstAttribute="width" constant="45" id="NOn-dU-RSD"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="btnSendMessage:" destination="T8e-C7-dEt" eventType="touchUpInside" id="I7P-nN-VOQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JxA-mZ-xcI" firstAttribute="leading" secondItem="KbQ-A1-yVY" secondAttribute="trailing" constant="8" id="9QB-BS-HbJ"/>
+                                    <constraint firstItem="KbQ-A1-yVY" firstAttribute="leading" secondItem="O3b-Ij-93S" secondAttribute="leading" constant="8" id="Bb8-Na-sEy"/>
+                                    <constraint firstAttribute="trailing" secondItem="JxA-mZ-xcI" secondAttribute="trailing" constant="8" id="ETU-Li-SWg"/>
+                                    <constraint firstAttribute="bottom" secondItem="KbQ-A1-yVY" secondAttribute="bottom" constant="8" id="GNC-wT-lyR"/>
+                                    <constraint firstItem="KbQ-A1-yVY" firstAttribute="top" secondItem="O3b-Ij-93S" secondAttribute="top" constant="7" id="eN0-Bc-4d8"/>
+                                    <constraint firstItem="JxA-mZ-xcI" firstAttribute="centerY" secondItem="O3b-Ij-93S" secondAttribute="centerY" id="hwo-X2-kln"/>
+                                    <constraint firstAttribute="height" constant="55" id="oWq-z7-kTG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="O3b-Ij-93S" firstAttribute="leading" secondItem="7hb-VM-bih" secondAttribute="leading" id="19Y-xY-qQI"/>
+                            <constraint firstAttribute="trailing" secondItem="Ln9-87-nhP" secondAttribute="trailing" id="4ch-OB-GUU"/>
+                            <constraint firstItem="YFv-hh-MAW" firstAttribute="top" secondItem="O3b-Ij-93S" secondAttribute="bottom" id="OXs-cj-l50"/>
+                            <constraint firstItem="Ln9-87-nhP" firstAttribute="top" secondItem="7hb-VM-bih" secondAttribute="top" id="U6I-Ef-qDw"/>
+                            <constraint firstItem="O3b-Ij-93S" firstAttribute="top" secondItem="Ln9-87-nhP" secondAttribute="bottom" constant="1" id="iPq-TB-FS1"/>
+                            <constraint firstAttribute="trailing" secondItem="O3b-Ij-93S" secondAttribute="trailing" id="lcg-6j-HJo"/>
+                            <constraint firstItem="Ln9-87-nhP" firstAttribute="leading" secondItem="7hb-VM-bih" secondAttribute="leading" id="lqC-Wo-032"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7eN-A3-iK5"/>
+                    <connections>
+                        <outlet property="collectionChat" destination="Ln9-87-nhP" id="v2h-Ew-tlQ"/>
+                        <outlet property="txtFieldMessage" destination="KbQ-A1-yVY" id="ArF-SR-1uq"/>
+                        <outlet property="viewTypeBottomConstraint" destination="OXs-cj-l50" id="T6n-fp-lag"/>
+                        <outlet property="viewTypeText" destination="O3b-Ij-93S" id="OEI-uf-a4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7N-J8-yI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672.79999999999995" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chatMan" width="26" height="26"/>
+        <image name="chatWoman" width="22" height="24"/>
+    </resources>
+</document>
