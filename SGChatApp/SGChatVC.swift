@@ -29,14 +29,12 @@ class SGChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: .UIKeyboardWillHide, object: nil)
         
-        navigationItem.title = "shamxal"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "right", style: .plain, target: self, action: #selector(handleRefresh))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: .plain, target: self, action: #selector(handleRefresh))
+//        navigationItem.title = ""
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "right", style: .plain, target: self, action: #selector(handleRefresh))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "left", style: .plain, target: self, action: #selector(handleRefresh))
     }
     
-    @objc func handleRefresh() {
-        
-    }
+    @objc func handleRefresh() {}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,8 +59,7 @@ class SGChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return arrMessage.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SGChatCell", for: indexPath) as! SGChatCell
         
         cell.reloadCell(chatText: arrMessage[indexPath.item] as! String, isFromMe: arrFromMe[indexPath.item] as! Bool, view: view)
@@ -70,8 +67,7 @@ class SGChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if arrMessage.count > indexPath.item {
             
             let chatText = arrMessage[indexPath.item] as! String
@@ -90,14 +86,13 @@ class SGChatVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         txtFieldMessage.endEditing(true)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
-    {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
     
     @IBAction func btnSendMessage(_ sender: Any) {
         
-        if (txtFieldMessage.text?.characters.count)! > 0 {
+        if (txtFieldMessage.text?.count)! > 0 {
             
             arrFromMe.add(true)
             arrMessage.add(txtFieldMessage.text ?? "")
